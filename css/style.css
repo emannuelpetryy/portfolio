@@ -1,4 +1,4 @@
-﻿*, *::before, *::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -54,7 +54,7 @@ header {
 .hero-left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 60px 48px 60px 64px;
 }
 
@@ -114,16 +114,20 @@ header {
 .hero-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   padding: 48px 64px 60px 48px;
 }
 
 .hero-year {
+  position: absolute;
+  top: 33px;
+  right: 140px;
   font-family: "DM Mono", monospace;
   font-size: 11px;
-  color: #2a2a2a;
+  color: var(--gray);
   letter-spacing: .2em;
-  align-self: flex-end;
+  margin: 0;
+  z-index: 10;
 }
 
 .hero-bg-video {
@@ -162,23 +166,28 @@ header {
   display: flex;
   align-items: center;
   gap: 0;
-  margin: auto 0;
   width: 100%;
+  border: 1px solid rgba(154, 75, 255, 0.15);
+  background: rgba(8, 8, 8, 0.35);
+  backdrop-filter: blur(8px);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .stat-h {
   flex: 1;
   text-align: center;
   padding: 24px 16px;
-  background: rgba(8,8,8,0.4);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(154, 75, 255,0.15);
-  transition: background 0.3s, border-color 0.3s;
+  border: none;
+  transition: background 0.3s;
+}
+
+.stat-h:not(:last-child) {
+  border-right: 1px solid rgba(154, 75, 255, 0.15);
 }
 
 .stat-h:hover {
-  background: rgba(154, 75, 255,0.06);
-  border-color: rgba(154, 75, 255,0.4);
+  background: rgba(154, 75, 255, 0.05);
 }
 
 .stat-h .stat-num {
@@ -1079,7 +1088,6 @@ body:has(.pill:hover) #cursor-ring {
 .sec-title em.glitching,
 .hero-name .l2.glitching {
   animation:
-    gfont 0.55s steps(1) forwards,
     gshift 0.55s linear forwards,
     gnoise 0.55s linear forwards;
 }
@@ -1494,9 +1502,14 @@ footer {
 
 /* SCROLL INDICATOR */
 .hero-scroll {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 14px;
+  z-index: 10;
 }
 
 .hero-scroll-txt {
@@ -1617,7 +1630,14 @@ footer {
   }
 
   .hero-year {
+    position: static;
     font-size: 10px;
+    align-self: center;
+    margin-top: 12px;
+  }
+
+  .hero-scroll {
+    display: none;
   }
 
   .hero-stats-row {
