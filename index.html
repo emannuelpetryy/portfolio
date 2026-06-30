@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emannuel Petry — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- LANGUAGE TOGGLE -->
+  <div id="langToggle" class="lang-toggle" onclick="toggleLang()">
+    <span class="lang-opt" id="langEN">EN</span>
+    <span class="lang-sep">|</span>
+    <span class="lang-opt active" id="langPT">PT</span>
+  </div>
+
+  <!-- CUSTOM PEN CURSOR -->
+  <div id="cursor">
+    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- pen body -->
+      <path d="M6 22 L10 10 L18 6 L22 10 L12 20 Z" fill="#F0EDE8" stroke="#111" stroke-width="0.8"/>
+      <!-- pen tip triangle -->
+      <path d="M6 22 L8 18 L10 20 Z" fill="#9A4BFF"/>
+      <!-- pen nib point -->
+      <circle cx="6" cy="22" r="1.2" fill="#9A4BFF"/>
+      <!-- highlight line on body -->
+      <path d="M11 10 L19 8" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- HEADER -->
+  <header>
+    <!-- Video background full hero -->
+    <video class="hero-bg-video" id="heroBgVideo" autoplay loop muted playsinline>
+      <source src="video/hero_bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-bg-overlay"></div>
+    
+    <div class="hero-left">
+      <p class="hero-tag fu d1" id="heroTag">Designer Gráfico & Web Designer — Cascavel, BR</p>
+      <h1 class="hero-name fu d2">
+        <span class="l1">EMANNUEL</span>
+        <span class="l2" data-text="PETRY">PETRY</span>
+      </h1>
+      <p class="hero-role fu d3" id="heroRole">
+        <strong>Design Gráfico · Web Design · Social Media</strong><br>
+        Identidade Visual · Landing Pages · UX/UI<br>
+        Disponível para projetos freelance
+      </p>
+    </div>
+    
+    <div class="hero-right fu d2">
+      <p class="hero-year">© 2026</p>
+      <div class="hero-stats-row">
+        <div class="stat-h">
+          <div class="stat-num">5<span>+</span></div>
+          <div class="stat-label" id="statLabel1">Anos de<br>experiência</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-h">
+          <div class="stat-num">1k<span>+</span></div>
+          <div class="stat-label" id="statLabel2">Projetos<br>entregues</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-h">
+          <div class="stat-num">3<span>x</span></div>
+          <div class="stat-label" id="statLabel3">Áreas de<br>atuação</div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span class="hero-scroll-txt" id="scrollTxt">Scroll</span>
+        <div class="scroll-icon">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner" id="tickerInner">
+      <span class="ti hi">BRANDING <span class="dot"></span></span>
+      <span class="ti">VIDEO EDITING <span class="dot"></span></span>
+      <span class="ti hi">SOCIAL MEDIA <span class="dot"></span></span>
+      <span class="ti">WEB DESIGN <span class="dot"></span></span>
+      <span class="ti hi">AD CREATIVES <span class="dot"></span></span>
+      <span class="ti">IDENTIDADE VISUAL <span class="dot"></span></span>
+      <span class="ti hi">REELS & TIKTOK <span class="dot"></span></span>
+      <span class="ti">PERFORMANCE <span class="dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div>
+      <p class="sec-label" id="aboutSecLabel"><span class="sec-num">01</span> Sobre</p>
+      <h2 class="sec-title" id="aboutTitle">O QUE<br><em>EU FAÇO</em><br>DE VERDADE.</h2>
+      <p class="about-text" id="aboutText">
+        Combino <strong>visual impactante</strong> com raciocínio estratégico. Não crio peças bonitas por acaso — cada entrega foi pensada para <strong>parar o scroll, criar conexão e gerar resultado real</strong>.<br><br>
+        Trabalho com marcas de diferentes nichos há mais de 5 anos, desenvolvendo identidades visuais, criativos para anúncios e sistemas digitais que performam. 100% remoto. Sempre no prazo.
+      </p>
+    </div>
+    <div class="about-right">
+      <div class="info-row"><span class="info-key" id="infoKeyLoc">Localização</span><span class="info-val" id="infoValLoc">Cascavel, Paraná — Brasil</span></div>
+      <div class="info-row"><span class="info-key" id="infoKeyAvail">Disponibilidade</span><span class="info-val" id="infoValAvail">Freelance Remoto · Nacional & Internacional</span></div>
+      <div class="info-row"><span class="info-key">LinkedIn</span><span class="info-val"><a href="https://linkedin.com/in/emannuel-petry" target="_blank">emannuel-petry</a></span></div>
+      <div class="info-row"><span class="info-key">E-mail</span><span class="info-val"><a href="mailto:emannuelpetry@gmail.com">emannuelpetry@gmail.com</a></span></div>
+      <div class="info-row"><span class="info-key" id="infoKeyLang">Idiomas</span><span class="info-val" id="infoValLang">Português Nativo · English Intermediate</span></div>
+      <div class="info-row"><span class="info-key" id="infoKeyEdu">Formação</span><span class="info-val" id="infoValEdu">Design Gráfico — FAG 2025</span></div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills">
+    <div class="skills-hd">
+      <p class="sec-label" id="skillsSecLabel"><span class="sec-num">02</span> Habilidades</p>
+      <h2 class="sec-title" id="skillsTitle">O QUE EU<br><em>DOMINO.</em></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="sk">
+        <div class="sk-icon">BRN</div>
+        <div class="sk-name" id="skName1">Branding & Identidade</div>
+        <ul class="sk-list">
+          <li>Logo Design</li>
+          <li>Visual Identity Systems</li>
+          <li>Brand Guidelines</li>
+          <li>Naming Visual</li>
+          <li>Tipografia & Paleta</li>
+        </ul>
+      </div>
+      <div class="sk">
+        <div class="sk-icon">WEB</div>
+        <div class="sk-name" id="skName2">Web & Interfaces</div>
+        <ul class="sk-list">
+          <li>Landing Pages</li>
+          <li>Sites Institucionais</li>
+          <li>E-commerce</li>
+          <li>UX/UI Design</li>
+          <li>SEO básico</li>
+        </ul>
+      </div>
+      <div class="sk">
+        <div class="sk-icon">MKT</div>
+        <div class="sk-name" id="skName3">Marketing & Comunicação</div>
+        <ul class="sk-list">
+          <li>Campanhas digitais</li>
+          <li>E-mail marketing</li>
+          <li>Comunicação visual</li>
+          <li>Organização de demandas</li>
+          <li>Adaptação a feedback</li>
+        </ul>
+      </div>
+      <div class="sk">
+        <div class="sk-icon">SFT</div>
+        <div class="sk-name" id="skName4">Soft Skills & Gestão</div>
+        <ul class="sk-list">
+          <li>Proatividade</li>
+          <li>Gestão de prazos</li>
+          <li>Comunicação com clientes</li>
+          <li>Trabalho em equipe</li>
+          <li>Organização interna</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <div class="tools">
+    <span class="tools-label" id="toolsLabel">Ferramentas</span>
+    <div class="tools-list">
+      <span class="pill">Adobe Photoshop</span>
+      <span class="pill">Adobe Illustrator</span>
+      <span class="pill">Adobe Premiere Pro</span>
+      <span class="pill">After Effects</span>
+      <span class="pill">Canva</span>
+      <span class="pill">CapCut</span>
+      <span class="pill">Meta Ads Manager</span>
+      <span class="pill">Google Ads</span>
+      <span class="pill">YouTube Adsense</span>
+      <span class="pill">TikTok</span>
+      <span class="pill">Figma</span>
+      <span class="pill">Lovable</span>
+      <span class="pill">v0</span>
+      <span class="pill">Emergents</span>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section class="projects">
+    <div class="proj-hd">
+      <p class="sec-label" id="projSecLabel"><span class="sec-num">03</span> Projetos</p>
+      <h2 class="sec-title" id="projTitle">TRABALHOS<br><em>SELECIONADOS.</em></h2>
+    </div>
+
+    <div class="proj-grid">
+      <!-- 01 CAMPO DO NECO -->
+      <div class="proj-card" id="card-campo">
+        <div class="proj-visual">
+          <div class="browser-mock">
+            <div class="browser-bar">
+              <span class="browser-dot" style="background:#ff5f57"></span>
+              <span class="browser-dot" style="background:#febc2e"></span>
+              <span class="browser-dot" style="background:#28c840"></span>
+              <span class="browser-url">campo-do-neco-manager.lovable.app</span>
+            </div>
+            <div class="browser-screen">
+              <img id="img-campo" src="img/campo.jpg" alt="Campo do Neco" class="browser-img" />
+            </div>
+          </div>
+          <div class="proj-num">01</div>
+        </div>
+        <div class="proj-info">
+          <p class="proj-cat" id="proj1Cat">Web Design · Branding · UI</p>
+          <h3 class="proj-title">CAMPO<br>DO NECO</h3>
+          <p class="proj-desc" id="proj1Desc">Landing page completa para complexo esportivo em Cascavel/PR. Visual dark com tipografia bold e verde neon, otimizada para conversão via WhatsApp. Inclui área do mensalista e sistema de reservas.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Landing Page</span>
+            <span class="proj-tag">Web Design</span>
+            <span class="proj-tag">Branding</span>
+            <span class="proj-tag">UI/UX</span>
+            <span class="proj-tag">Lovable</span>
+          </div>
+          <a href="https://campo-do-neco-manager.lovable.app/" target="_blank" class="proj-link" id="proj1Link">Ver projeto →</a>
+        </div>
+      </div>
+
+      <!-- 02 CALL FLOW CRM -->
+      <div class="proj-card rev">
+        <div class="proj-info">
+          <p class="proj-cat" id="proj2Cat">SaaS · UI Design · Product Design</p>
+          <h3 class="proj-title">CALL FLOW<br>CRM</h3>
+          <p class="proj-desc" id="proj2Desc">Sistema CRM completo para vendas consultivas. Pipeline com roteiro de call assistido por IA, kanban de leads, dashboard de performance e prospecção com dados da Receita Federal.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">SaaS Design</span>
+            <span class="proj-tag">UI System</span>
+            <span class="proj-tag">Dashboard</span>
+            <span class="proj-tag">CRM</span>
+            <span class="proj-tag">IA</span>
+          </div>
+          <a href="https://callflowcrm.site" target="_blank" class="proj-link" id="proj2Link">Ver projeto →</a>
+        </div>
+        <div class="proj-visual">
+          <div class="browser-mock">
+            <div class="browser-bar">
+              <span class="browser-dot" style="background:#ff5f57"></span>
+              <span class="browser-dot" style="background:#febc2e"></span>
+              <span class="browser-dot" style="background:#28c840"></span>
+              <span class="browser-url">callflowcrm.site — Pipeline</span>
+            </div>
+            <div class="browser-screen">
+              <img id="img-cf1" src="img/callflow.jpg" alt="Call Flow Combined" class="browser-img" style="animation-name:lp-scroll-cf;animation-duration:20s" />
+            </div>
+          </div>
+          <div class="proj-num">02</div>
+        </div>
+      </div>
+
+      <!-- 03 IMOBILIÁRIA CIDADE -->
+      <div class="proj-card">
+        <div class="proj-visual">
+          <div class="browser-mock">
+            <div class="browser-bar">
+              <span class="browser-dot" style="background:#ff5f57"></span>
+              <span class="browser-dot" style="background:#febc2e"></span>
+              <span class="browser-dot" style="background:#28c840"></span>
+              <span class="browser-url">KV — Imobiliária Cidade 2025</span>
+            </div>
+            <div class="browser-screen">
+              <img id="img-kv1" src="img/imobiliaria.jpg" alt="KV Imobiliária Cidade" class="browser-img" style="animation-name:lp-scroll-cf;animation-duration:18s" />
+            </div>
+          </div>
+          <div class="proj-num">03</div>
+        </div>
+        <div class="proj-info">
+          <p class="proj-cat" id="proj3Cat">Branding · KV · Identidade Visual</p>
+          <h3 class="proj-title">IMOBILIÁRIA<br>CIDADE</h3>
+          <p class="proj-desc" id="proj3Desc">Projeto de marca completo para imobiliária com mais de 35 anos de mercado. Inclui redesign de logo, arquétipo de marca, moodboard, paleta, tipografia e padrão visual de posts para redes sociais.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Brand Strategy</span>
+            <span class="proj-tag">Logo Design</span>
+            <span class="proj-tag">KV Completo</span>
+            <span class="proj-tag">Social Media</span>
+            <span class="proj-tag">V4 Company</span>
+          </div>
+          <span class="proj-link-off" id="proj3Link">Projeto Confidencial</span>
+        </div>
+      </div>
+
+      <!-- 04 ECOPLUS -->
+      <div class="proj-card rev">
+        <div class="proj-info">
+          <p class="proj-cat" id="proj4Cat">Landing Page · Web Design · E-commerce</p>
+          <h3 class="proj-title">ECOPLUS<br>SACOLAS TNT</h3>
+          <p class="proj-desc" id="proj4Desc">Landing page para fabricante de sacolas personalizadas em TNT. Design limpo e sustentável com foco em conversão para solicitação de orçamento. Desenvolvida com v0 + Vercel.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Landing Page</span>
+            <span class="proj-tag">Web Design</span>
+            <span class="proj-tag">E-commerce</span>
+            <span class="proj-tag">v0 + Vercel</span>
+          </div>
+          <a href="https://v0-ecoplus.vercel.app/" target="_blank" class="proj-link" id="proj4Link">Ver projeto →</a>
+        </div>
+        <div class="proj-visual">
+          <div class="browser-mock">
+            <div class="browser-bar">
+              <span class="browser-dot" style="background:#ff5f57"></span>
+              <span class="browser-dot" style="background:#febc2e"></span>
+              <span class="browser-dot" style="background:#28c840"></span>
+              <span class="browser-url">lp.ecoplus.ind.br</span>
+            </div>
+            <div class="browser-screen">
+              <img id="img-ecoplus" src="img/ecoplus.jpg" class="browser-img" alt="EcoPlus LP" style="animation-name:lp-scroll-ecoplus;animation-duration:22s" />
+            </div>
+          </div>
+          <div class="proj-num">04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL MEDIA POSTS -->
+  <section class="reels">
+    <div class="reels-hd">
+      <p class="sec-label" id="reelsSecLabel"><span class="sec-num">04</span> Social Media</p>
+      <h2 class="sec-title" id="reelsTitle">POSTS &<br><em>DESIGN.</em></h2>
+    </div>
+    <div class="reels-grid">
+      <!-- Item 1 -->
+      <div class="reel-wrap" onclick="openHolo(this)">
+        <img class="reel-video" src="img/post1.jpg" alt="Criativo de Performance">
+        <div class="reel-overlay"></div>
+        <div class="reel-info">
+          <span class="reel-label">V4 Company · Performance</span>
+          <div class="reel-title">Ad Creative V4</div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="reel-wrap" onclick="openHolo(this)">
+        <img class="reel-video" src="img/post2.jpg" alt="Carousel Design">
+        <div class="reel-overlay"></div>
+        <div class="reel-info">
+          <span class="reel-label">Instagram · Content Design</span>
+          <div class="reel-title">Carrossel Estratégico</div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="reel-wrap" onclick="openHolo(this)">
+        <img class="reel-video" src="img/post3.jpg" alt="Cover Art">
+        <div class="reel-overlay"></div>
+        <div class="reel-info">
+          <span class="reel-label">Cover Art · Music release</span>
+          <div class="reel-title">Design de Capa</div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="reel-wrap" onclick="openHolo(this)">
+        <img class="reel-video" src="img/imobiliaria.jpg" alt="Branding KV">
+        <div class="reel-overlay"></div>
+        <div class="reel-info">
+          <span class="reel-label">Imobiliária Cidade · Branding</span>
+          <div class="reel-title">Key Visual Design</div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="reel-wrap" onclick="openHolo(this)">
+        <img class="reel-video" src="img/campo.jpg" alt="Campo do Neco LP">
+        <div class="reel-overlay"></div>
+        <div class="reel-info">
+          <span class="reel-label">Campo do Neco · Web & Visual</span>
+          <div class="reel-title">Identidade Visual</div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="reel-wrap" onclick="openHolo(this)">
+        <img class="reel-video" src="img/callflow.jpg" alt="Call Flow SaaS">
+        <div class="reel-overlay"></div>
+        <div class="reel-info">
+          <span class="reel-label">SaaS · UI System</span>
+          <div class="reel-title">Call Flow Interface</div>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="reel-wrap" onclick="openHolo(this)">
+        <img class="reel-video" src="img/ecoplus.jpg" alt="EcoPlus Sacolas">
+        <div class="reel-overlay"></div>
+        <div class="reel-info">
+          <span class="reel-label">E-commerce · Web layout</span>
+          <div class="reel-title">EcoPlus Layout</div>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="reel-wrap" onclick="openHolo(this)">
+        <img class="reel-video" src="img/post1.jpg" alt="Social Post">
+        <div class="reel-overlay"></div>
+        <div class="reel-info">
+          <span class="reel-label">Marketing Digital · Layout</span>
+          <div class="reel-title">Design Lab Post</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience">
+    <div class="exp-header">
+      <p class="sec-label" id="expSecLabel"><span class="sec-num">05</span> Experiência</p>
+      <h2 class="sec-title" id="expTitle">ONDE<br><em>ATUEI.</em></h2>
+    </div>
+
+    <div class="tl-container">
+      <div class="tl-track"><div class="tl-progress" id="tlProgress"></div></div>
+
+      <!-- ITEM 1 -->
+      <div class="tl-item" data-index="0">
+        <div class="tl-node"><span class="tl-node-inner"></span></div>
+        <div class="tl-year">2024<br>—<br>Atual</div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-co" id="exp1Co">V4 Company</span>
+          </div>
+          <h3 class="tl-role" id="exp1Role">Designer Gráfico</h3>
+          <p class="tl-desc" id="exp1Desc">Criação de layouts, peças para redes sociais, materiais publicitários e identidades visuais para campanhas e clientes corporativos de grande porte.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">Branding</span>
+            <span class="tl-tag">Ad Creative</span>
+            <span class="tl-tag">Layout Design</span>
+            <span class="tl-tag">Visual Identity</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="tl-item" data-index="1">
+        <div class="tl-node"><span class="tl-node-inner"></span></div>
+        <div class="tl-year">2024<br>—<br>2024</div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-co" id="exp2Co">Agronavis</span>
+          </div>
+          <h3 class="tl-role" id="exp2Role">Designer Gráfico</h3>
+          <p class="tl-desc" id="exp2Desc">Produção de peças digitais e materiais impressos para campanhas, mídias sociais e comunicação institucional, fortalecendo a percepção e clareza da marca.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">Social Media</span>
+            <span class="tl-tag">Print Design</span>
+            <span class="tl-tag">Institutional Brand</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="tl-item" data-index="2">
+        <div class="tl-node"><span class="tl-node-inner"></span></div>
+        <div class="tl-year">2020<br>—<br>2024</div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-co" id="exp3Co">Staker</span>
+          </div>
+          <h3 class="tl-role" id="exp3Role">Web Designer</h3>
+          <p class="tl-desc" id="exp3Desc">Criação de landing pages, e-mail marketing, sites institucionais e interfaces focadas em experiência do usuário. Otimização de plataformas de e-commerce.</p>
+          <div class="tl-tags">
+            <span class="tl-tag">Web Design</span>
+            <span class="tl-tag">UX/UI</span>
+            <span class="tl-tag">E-commerce</span>
+            <span class="tl-tag">SEO básico</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM INFO -->
+  <div class="info-bottom">
+    <div class="info-block">
+      <p class="sec-label" id="langSecLabel"><span class="sec-num">06</span> Idiomas</p>
+      <h2 class="sec-title" id="langTitle">LÍNGUAS.</h2>
+      <div class="lang-list">
+        <div>
+          <div class="lang-name" id="langName1">Português <span class="lang-lvl" id="langLvl1">Nativo</span></div>
+          <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+        </div>
+        <div>
+          <div class="lang-name" id="langName2">English <span class="lang-lvl" id="langLvl2">Intermediário</span></div>
+          <div class="lang-bar"><div class="lang-fill" style="width:62%"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="info-block">
+      <p class="sec-label" id="eduSecLabel"><span class="sec-num">07</span> Formação</p>
+      <h2 class="sec-title" id="eduTitle">EDUCAÇÃO.</h2>
+      <div class="edu-item">
+        <div class="edu-degree" id="eduDegree">Tecnólogo em<br>Design Gráfico</div>
+        <div class="edu-school" id="eduSchool">Centro Universitário FAG</div>
+        <div class="edu-period">2023 — 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name" id="footerName">EMANNUEL PETRY</p>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/emannuel-petry" target="_blank">LinkedIn</a>
+      <a href="mailto:emannuelpetry@gmail.com" target="_blank">E-mail</a>
+      <a href="https://campo-do-neco-manager.lovable.app/" target="_blank">Campo do Neco</a>
+      <a href="https://callflowcrm.site" target="_blank">Call Flow</a>
+    </div>
+    <p class="footer-copy" id="footerCopy">© 2026 — Cascavel, BR</p>
+  </footer>
+
+  <!-- HOLOGRAM MODAL -->
+  <div id="holoModal" class="holo-modal">
+    <div class="holo-backdrop" onclick="closeHolo()"></div>
+    <div class="holo-container">
+      <div class="holo-scanlines"></div>
+      <span class="holo-corner tl"></span>
+      <span class="holo-corner tr"></span>
+      <span class="holo-corner bl"></span>
+      <span class="holo-corner br"></span>
+      <div class="holo-header">
+        <div class="holo-header-left">
+          <span class="holo-dot"></span>
+          <span class="holo-dot"></span>
+          <span class="holo-dot"></span>
+          <span class="holo-title" id="holoTitle">VIDEO.EXE</span>
+        </div>
+        <button class="holo-close" onclick="closeHolo()">✕ FECHAR</button>
+      </div>
+      <div class="holo-screen">
+        <div class="holo-noise"></div>
+        <video id="holoVideo" class="holo-video" playsinline controls></video>
+        <img id="holoImage" class="holo-image" style="display:none; width:100%; height:100%; object-fit:contain;" alt="Hologram Preview" />
+        <div class="holo-rgb"></div>
+      </div>
+      <div class="holo-footer">
+        <span class="holo-status" id="holoStatus">● REPRODUZINDO</span>
+        <span class="holo-freq">FREQ: 60.00Hz</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
