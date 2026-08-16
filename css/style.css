@@ -1571,12 +1571,46 @@ footer {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* LANGUAGE TOGGLE */
-.lang-toggle {
+/* HEADER ACTIONS & CV DOWNLOAD */
+.header-actions {
   position: fixed;
   top: 24px;
   right: 28px;
   z-index: 99995;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cv-download-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(154, 75, 255, 0.15);
+  border: 1px solid rgba(154, 75, 255, 0.5);
+  color: var(--white);
+  padding: 7px 14px;
+  border-radius: 2px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.cv-download-btn:hover {
+  background: var(--primary);
+  border-color: #b875ff;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(154, 75, 255, 0.5);
+}
+
+/* LANGUAGE TOGGLE */
+.lang-toggle {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
