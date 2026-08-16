@@ -682,8 +682,7 @@ var creativeGroups = {
     items: [
       { src: "img/verbo-luiza-1.png", title: "Projeto Verbo Editorial — Pauta 01 (Luiza)", format: "EDITORIAL" },
       { src: "img/verbo-luiza-2.png", title: "Projeto Verbo Editorial — Pauta 02 (Luiza)", format: "EDITORIAL" },
-      { src: "img/verbo-vinicius-1.png", title: "Projeto Verbo Editorial — Edição Especial (Vinicius)", format: "EDITORIAL" },
-      { src: "img/verbo-vinicius-2.png", title: "Projeto Verbo Editorial — Layout Interno (Vinicius)", format: "EDITORIAL" }
+      { src: "img/verbo-vinicius-1.png", title: "Projeto Verbo Editorial — Edição Especial (Vinicius)", format: "EDITORIAL" }
     ]
   },
   facul: {
