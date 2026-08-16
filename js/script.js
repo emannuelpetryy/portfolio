@@ -623,28 +623,76 @@ var creativeGroups = {
       { src: "img/creative-classe-2.png", title: "Banner 1ª Entrada Resort (Mobile)", format: "BANNER MOBILE" }
     ]
   },
+  madevan: {
+    title: "MADEVAN MADEIREIRA",
+    category: "Identidade Visual · Manual de Marca & Aplicações",
+    items: [
+      { src: "img/madevan-1.png", title: "Manual de Identidade Visual — Madevan (Pág 01)", format: "BRANDING" },
+      { src: "img/madevan-2.png", title: "Manual de Identidade Visual — Madevan (Pág 02)", format: "BRANDING" },
+      { src: "img/madevan-3.png", title: "Manual de Identidade Visual — Madevan (Pág 03)", format: "BRANDING" },
+      { src: "img/madevan-4.png", title: "Manual de Identidade Visual — Madevan (Pág 04)", format: "BRANDING" },
+      { src: "img/madevan-5.png", title: "Manual de Identidade Visual — Madevan (Pág 05)", format: "BRANDING" },
+      { src: "img/madevan-6.png", title: "Manual de Identidade Visual — Madevan (Pág 06)", format: "BRANDING" },
+      { src: "img/madevan-7.png", title: "Manual de Identidade Visual — Madevan (Pág 07)", format: "BRANDING" },
+      { src: "img/madevan-8.png", title: "Manual de Identidade Visual — Madevan (Pág 08)", format: "BRANDING" },
+      { src: "img/madevan-9.png", title: "Manual de Identidade Visual — Madevan (Pág 09)", format: "BRANDING" },
+      { src: "img/madevan-10.png", title: "Manual de Identidade Visual — Madevan (Pág 10)", format: "BRANDING" },
+      { src: "img/madevan-11.png", title: "Manual de Identidade Visual — Madevan (Pág 11)", format: "BRANDING" },
+      { src: "img/madevan-12.png", title: "Manual de Identidade Visual — Madevan (Pág 12)", format: "BRANDING" },
+      { src: "img/madevan-13.png", title: "Manual de Identidade Visual — Madevan (Pág 13)", format: "BRANDING" },
+      { src: "img/madevan-14.png", title: "Manual de Identidade Visual — Madevan (Pág 14)", format: "BRANDING" }
+    ]
+  },
+  bandatoca: {
+    title: "É ASSIM QUE A BANDA TOCA",
+    category: "Faculdade FAG · Apresentação & Projeto Visual",
+    items: [
+      { src: "img/banda-toca-1.png", title: "Apresentação Editorial — Capa", format: "EDITORIAL" },
+      { src: "img/banda-toca-2.png", title: "Apresentação Editorial — Slide 02", format: "EDITORIAL" },
+      { src: "img/banda-toca-3.png", title: "Apresentação Editorial — Slide 03", format: "EDITORIAL" },
+      { src: "img/banda-toca-4.png", title: "Apresentação Editorial — Slide 04", format: "EDITORIAL" },
+      { src: "img/banda-toca-5.png", title: "Apresentação Editorial — Slide 05", format: "EDITORIAL" },
+      { src: "img/banda-toca-6.png", title: "Apresentação Editorial — Slide 06", format: "EDITORIAL" },
+      { src: "img/banda-toca-7.png", title: "Apresentação Editorial — Slide 07", format: "EDITORIAL" },
+      { src: "img/banda-toca-8.png", title: "Apresentação Editorial — Slide 08", format: "EDITORIAL" },
+      { src: "img/banda-toca-9.png", title: "Apresentação Editorial — Slide 09", format: "EDITORIAL" },
+      { src: "img/banda-toca-10.png", title: "Apresentação Editorial — Slide 10", format: "EDITORIAL" },
+      { src: "img/banda-toca-11.png", title: "Apresentação Editorial — Slide 11", format: "EDITORIAL" },
+      { src: "img/banda-toca-12.png", title: "Apresentação Editorial — Slide 12", format: "EDITORIAL" },
+      { src: "img/banda-toca-13.png", title: "Apresentação Editorial — Slide 13", format: "EDITORIAL" }
+    ]
+  },
+  comfag: {
+    title: "CARROSSEIS COMFAG",
+    category: "Faculdade FAG · Carrosséis em Ordem (DG, Foto & PP)",
+    items: [
+      { src: "img/comfag-dg-1.png", title: "COMFAG Design Gráfico — Slide 1/4", format: "CARROSSEL" },
+      { src: "img/comfag-dg-2.png", title: "COMFAG Design Gráfico — Slide 2/4", format: "CARROSSEL" },
+      { src: "img/comfag-dg-3.png", title: "COMFAG Design Gráfico — Slide 3/4", format: "CARROSSEL" },
+      { src: "img/comfag-dg-4.png", title: "COMFAG Design Gráfico — Slide 4/4", format: "CARROSSEL" },
+      { src: "img/comfag-foto-1.png", title: "COMFAG Fotografia — Slide 1/2", format: "CARROSSEL" },
+      { src: "img/comfag-foto-2.png", title: "COMFAG Fotografia — Slide 2/2", format: "CARROSSEL" },
+      { src: "img/comfag-pp-1.png", title: "COMFAG Publicidade — Slide 1/2", format: "CARROSSEL" },
+      { src: "img/comfag-pp-2.png", title: "COMFAG Publicidade — Slide 2/2", format: "CARROSSEL" }
+    ]
+  },
   verbo: {
     title: "PROJETO VERBO 2025",
-    category: "Faculdade FAG · Design Editorial & Identidade Visual",
+    category: "Faculdade FAG · Design Editorial & Revista",
     items: [
-      { src: "img/verbo-luiza-1.png", title: "Projeto Verbo Editorial — Pauta 01", format: "EDITORIAL" },
-      { src: "img/verbo-luiza-2.png", title: "Projeto Verbo Editorial — Pauta 02", format: "EDITORIAL" },
-      { src: "img/verbo-vinicius-1.png", title: "Projeto Verbo Editorial — Edição Especial", format: "EDITORIAL" },
-      { src: "img/verbo-vinicius-2.png", title: "Projeto Verbo Editorial — Layout Interno", format: "EDITORIAL" },
-      { src: "img/madevan-1.png", title: "Manual de Identidade Visual — Madevan", format: "BRANDING" },
-      { src: "img/madevan-2.png", title: "Aplicações de Marca — Madevan", format: "BRANDING" }
+      { src: "img/verbo-luiza-1.png", title: "Projeto Verbo Editorial — Pauta 01 (Luiza)", format: "EDITORIAL" },
+      { src: "img/verbo-luiza-2.png", title: "Projeto Verbo Editorial — Pauta 02 (Luiza)", format: "EDITORIAL" },
+      { src: "img/verbo-vinicius-1.png", title: "Projeto Verbo Editorial — Edição Especial (Vinicius)", format: "EDITORIAL" },
+      { src: "img/verbo-vinicius-2.png", title: "Projeto Verbo Editorial — Layout Interno (Vinicius)", format: "EDITORIAL" }
     ]
   },
   facul: {
-    title: "MOCKUPS & ACADÊMICO",
-    category: "Faculdade FAG · Direção de Arte & Embalagens",
+    title: "MOCKUPS & EMBALAGENS",
+    category: "Faculdade FAG · Mockups 3D de Embalagens",
     items: [
       { src: "img/facul-mockupaguademar.png", title: "Mockup Embalagem — Água de Mar", format: "MOCKUP 3D" },
       { src: "img/facul-mockuppenareia.png", title: "Mockup Embalagem — Pé na Areia", format: "MOCKUP 3D" },
-      { src: "img/facul-mockupsoldourado.png", title: "Mockup Embalagem — Sol Dourado", format: "MOCKUP 3D" },
-      { src: "img/facul-Post_COMFAG_DG_-_1.png", title: "Campanha COMFAG — Design Gráfico", format: "FEED (1:1)" },
-      { src: "img/facul-Post_COMFAG_FOTOGRAFIA_-_1.png", title: "Campanha COMFAG — Fotografia", format: "FEED (1:1)" },
-      { src: "img/facul-Post_COMFAG_PP_-_1.png", title: "Campanha COMFAG — Publicidade", format: "FEED (1:1)" }
+      { src: "img/facul-mockupsoldourado.png", title: "Mockup Embalagem — Sol Dourado", format: "MOCKUP 3D" }
     ]
   }
 };
