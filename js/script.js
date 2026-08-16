@@ -604,6 +604,48 @@ var creativeGroups = {
       { src: "img/morocar_feed2.png", title: "Daylux Conteiner Feed", format: "FEED (1:1)" },
       { src: "img/morocar_story1.png", title: "Especial Dia das Mães Story", format: "STORY (9:16)" }
     ]
+  },
+  pandora: {
+    title: "PANDORA ESCOLA DA ARTE",
+    category: "V4 Company · Escola da Arte & Cursos",
+    items: [
+      { src: "img/creative-pandora-1.png", title: "Criativo Ilustrador Feed", format: "FEED (1:1)" },
+      { src: "img/creative-pandora-2.png", title: "Criativo Hobista Feed", format: "FEED (1:1)" },
+      { src: "img/creative-pandora-3.png", title: "Criativo Iniciante Feed", format: "FEED (1:1)" },
+      { src: "img/creative-pandora-4.png", title: "Criativo Filho na Tela Feed", format: "FEED (1:1)" }
+    ]
+  },
+  classe: {
+    title: "CLASSE BOLSAS & COURO",
+    category: "Gestão de E-commerce · Banners Resort",
+    items: [
+      { src: "img/creative-classe-1.png", title: "Banner 1ª Entrada Resort (Desktop)", format: "BANNER DESKTOP" },
+      { src: "img/creative-classe-2.png", title: "Banner 1ª Entrada Resort (Mobile)", format: "BANNER MOBILE" }
+    ]
+  },
+  verbo: {
+    title: "PROJETO VERBO 2025",
+    category: "Faculdade FAG · Design Editorial & Identidade Visual",
+    items: [
+      { src: "img/verbo-luiza-1.png", title: "Projeto Verbo Editorial — Pauta 01", format: "EDITORIAL" },
+      { src: "img/verbo-luiza-2.png", title: "Projeto Verbo Editorial — Pauta 02", format: "EDITORIAL" },
+      { src: "img/verbo-vinicius-1.png", title: "Projeto Verbo Editorial — Edição Especial", format: "EDITORIAL" },
+      { src: "img/verbo-vinicius-2.png", title: "Projeto Verbo Editorial — Layout Interno", format: "EDITORIAL" },
+      { src: "img/madevan-1.png", title: "Manual de Identidade Visual — Madevan", format: "BRANDING" },
+      { src: "img/madevan-2.png", title: "Aplicações de Marca — Madevan", format: "BRANDING" }
+    ]
+  },
+  facul: {
+    title: "MOCKUPS & ACADÊMICO",
+    category: "Faculdade FAG · Direção de Arte & Embalagens",
+    items: [
+      { src: "img/facul-mockupaguademar.png", title: "Mockup Embalagem — Água de Mar", format: "MOCKUP 3D" },
+      { src: "img/facul-mockuppenareia.png", title: "Mockup Embalagem — Pé na Areia", format: "MOCKUP 3D" },
+      { src: "img/facul-mockupsoldourado.png", title: "Mockup Embalagem — Sol Dourado", format: "MOCKUP 3D" },
+      { src: "img/facul-Post_COMFAG_DG_-_1.png", title: "Campanha COMFAG — Design Gráfico", format: "FEED (1:1)" },
+      { src: "img/facul-Post_COMFAG_FOTOGRAFIA_-_1.png", title: "Campanha COMFAG — Fotografia", format: "FEED (1:1)" },
+      { src: "img/facul-Post_COMFAG_PP_-_1.png", title: "Campanha COMFAG — Publicidade", format: "FEED (1:1)" }
+    ]
   }
 };
 
