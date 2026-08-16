@@ -563,3 +563,140 @@ function toggleLang() {
 document.addEventListener("DOMContentLoaded", function() {
   applyLang("pt");
 });
+
+// --- BRAND CREATIVE GALLERY MODAL LOGIC ---
+var creativeGroups = {
+  portalfort: {
+    title: "PORTALFORT",
+    category: "V4 Company · E-commerce & Ferramentas",
+    items: [
+      { src: "img/portalfort_feed1.png", title: "Criativo Feed #01", format: "FEED (1:1)" },
+      { src: "img/portalfort_story1.png", title: "Criativo Story #01", format: "STORY (9:16)" },
+      { src: "img/portalfort_feed2.png", title: "Criativo Feed #02", format: "FEED (1:1)" },
+      { src: "img/portalfort_story2.png", title: "Criativo Story #02", format: "STORY (9:16)" }
+    ]
+  },
+  maplebear: {
+    title: "MAPLE BEAR",
+    category: "V4 Company · Concurso de Bolsas",
+    items: [
+      { src: "img/maplebear_feed1.png", title: "Foco em Escassez Feed", format: "FEED (1:1)" },
+      { src: "img/maplebear_story1.png", title: "Foco em Escassez Story", format: "STORY (9:16)" },
+      { src: "img/maplebear_feed2.png", title: "Contagem Regressiva Feed", format: "FEED (1:1)" },
+      { src: "img/maplebear_story2.png", title: "Contagem Regressiva Story", format: "STORY (9:16)" }
+    ]
+  },
+  prontia: {
+    title: "PRONTÍA SAÚDE",
+    category: "V4 Company · Telemedicina & Saúde",
+    items: [
+      { src: "img/prontia_feed1.png", title: "Gripe ou Resfriado Feed", format: "FEED (1:1)" },
+      { src: "img/prontia_feed2.png", title: "Psicologia Online Feed", format: "FEED (1:1)" },
+      { src: "img/prontia_story1.png", title: "Relato de Paciente Story", format: "STORY (9:16)" },
+      { src: "img/prontia_story2.png", title: "Médico de Verdade Story", format: "STORY (9:16)" }
+    ]
+  },
+  morocar: {
+    title: "MOROCAR",
+    category: "V4 Company · Automotivo & B2B",
+    items: [
+      { src: "img/morocar_feed1.png", title: "Estático B2B Feed", format: "FEED (1:1)" },
+      { src: "img/morocar_feed2.png", title: "Daylux Conteiner Feed", format: "FEED (1:1)" },
+      { src: "img/morocar_story1.png", title: "Especial Dia das Mães Story", format: "STORY (9:16)" }
+    ]
+  }
+};
+
+var currentGroupKey = null;
+var currentGroupIndex = 0;
+
+function openCreativeGallery(groupKey) {
+  var group = creativeGroups[groupKey];
+  if (!group) return;
+  
+  currentGroupKey = groupKey;
+  currentGroupIndex = 0;
+
+  var modal = document.getElementById("creativeGalleryModal");
+  var headTitle = document.getElementById("galHeadTitle");
+  var category = document.getElementById("galCategory");
+
+  headTitle.textContent = group.title;
+  category.textContent = group.category;
+
+  renderGalleryState();
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function renderGalleryState() {
+  var group = creativeGroups[currentGroupKey];
+  if (!group || !group.items[currentGroupIndex]) return;
+
+  var item = group.items[currentGroupIndex];
+  var mainImg = document.getElementById("galMainImg");
+  var caption = document.getElementById("galCaption");
+  var badge = document.getElementById("galFormatBadge");
+  var thumbsContainer = document.getElementById("galThumbs");
+
+  mainImg.style.opacity = "0";
+  mainImg.style.transform = "scale(0.96)";
+
+  setTimeout(function() {
+    mainImg.src = item.src;
+    caption.textContent = item.title + " (" + (currentGroupIndex + 1) + "/" + group.items.length + ")";
+    badge.textContent = item.format;
+    mainImg.style.opacity = "1";
+    mainImg.style.transform = "scale(1)";
+  }, 120);
+
+  // Render Thumbnails
+  thumbsContainer.innerHTML = "";
+  group.items.forEach(function(itm, idx) {
+    var thumb = document.createElement("div");
+    thumb.className = "gal-thumb" + (idx === currentGroupIndex ? " active" : "");
+    thumb.onclick = function() { selectGalleryItem(idx); };
+    
+    var tImg = document.createElement("img");
+    tImg.src = itm.src;
+    tImg.alt = itm.title;
+
+    thumb.appendChild(tImg);
+    thumbsContainer.appendChild(thumb);
+  });
+}
+
+function selectGalleryItem(idx) {
+  currentGroupIndex = idx;
+  renderGalleryState();
+}
+
+function prevGalleryItem() {
+  var group = creativeGroups[currentGroupKey];
+  if (!group) return;
+  currentGroupIndex = (currentGroupIndex - 1 + group.items.length) % group.items.length;
+  renderGalleryState();
+}
+
+function nextGalleryItem() {
+  var group = creativeGroups[currentGroupKey];
+  if (!group) return;
+  currentGroupIndex = (currentGroupIndex + 1) % group.items.length;
+  renderGalleryState();
+}
+
+function closeCreativeGallery() {
+  var modal = document.getElementById("creativeGalleryModal");
+  if (modal) modal.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+// Global Keyboard Navigation
+document.addEventListener("keydown", function(e) {
+  var modal = document.getElementById("creativeGalleryModal");
+  if (modal && modal.classList.contains("open")) {
+    if (e.key === "ArrowLeft") prevGalleryItem();
+    if (e.key === "ArrowRight") nextGalleryItem();
+    if (e.key === "Escape") closeCreativeGallery();
+  }
+});
