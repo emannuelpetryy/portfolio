@@ -349,7 +349,7 @@ var translations = {
     // Selected Projects
     "proj1Cat":      "SaaS · Inteligência de Dados · CRM",
     "proj1Desc":     "Plataforma SaaS de inteligência de dados B2B com base de 30M+ de empresas, CRM Kanban para vendas externas, motor de IA entrevistadora e prospecção ativa em campo.",
-    "proj1Link":     "Plataforma SaaS",
+    "proj1Link":     "Ver projeto →",
     "proj2Cat":      "Landing Page · Agronegócio · Web Design",
     "proj2Desc":     "Landing page premium de alta conversão para produtor agrícola de sementes e feno em altitude (SC). Visual verde e dourado com curvas orgânicas de colina em SVG e fluxo de cotação via WhatsApp.",
     "proj2Link":     "Ver projeto →",
@@ -407,7 +407,7 @@ var translations = {
     // Selected Projects
     "proj1Cat":      "SaaS · Data Intelligence · CRM",
     "proj1Desc":     "B2B data intelligence SaaS platform featuring 30M+ company records, field-sales Kanban CRM, AI-driven interviewing engine and active prospecting.",
-    "proj1Link":     "SaaS Platform",
+    "proj1Link":     "View project →",
     "proj2Cat":      "Landing Page · Agribusiness · Web Design",
     "proj2Desc":     "High-converting premium landing page for high-altitude seed and hay agricultural producer in Santa Catarina. Green and gold visuals with organic SVG hill curves and WhatsApp quotation flow.",
     "proj2Link":     "View project →",
