@@ -728,16 +728,11 @@ function renderGalleryState() {
   var badge = document.getElementById("galFormatBadge");
   var thumbsContainer = document.getElementById("galThumbs");
 
-  mainImg.style.opacity = "0";
-  mainImg.style.transform = "scale(0.96)";
-
-  setTimeout(function() {
-    mainImg.src = item.src;
-    caption.textContent = item.title + " (" + (currentGroupIndex + 1) + "/" + group.items.length + ")";
-    badge.textContent = item.format;
-    mainImg.style.opacity = "1";
-    mainImg.style.transform = "scale(1)";
-  }, 120);
+  mainImg.src = item.src;
+  caption.textContent = item.title + " (" + (currentGroupIndex + 1) + "/" + group.items.length + ")";
+  badge.textContent = item.format;
+  mainImg.style.opacity = "1";
+  mainImg.style.transform = "scale(1)";
 
   // Render Thumbnails
   thumbsContainer.innerHTML = "";
