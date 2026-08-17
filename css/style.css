@@ -1648,43 +1648,67 @@ footer {
 /* --------------------------------------
    MOBILE STYLING (max-width: 768px)
 -------------------------------------- */
+/* --------------------------------------
+   MOBILE RESPONSIVE ADAPTATION (max-width: 768px)
+-------------------------------------- */
 @media (max-width: 768px) {
   #cursor, #cursor-dot, #cursor-ring {
-    display: none;
+    display: none !important;
   }
   
   body {
-    cursor: auto;
+    cursor: auto !important;
+  }
+
+  /* Fixed Top Action Bar for Mobile */
+  .header-actions {
+    top: 14px;
+    right: 14px;
+    gap: 8px;
+  }
+
+  .cv-download-btn {
+    padding: 8px 12px;
+    font-size: 10px;
+    min-height: 44px;
+  }
+
+  .lang-toggle {
+    padding: 8px 12px;
+    min-height: 44px;
   }
 
   header {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    min-height: 100vh;
+    min-height: auto;
+    padding-top: 60px;
   }
 
   .hero-left {
-    padding: 48px 28px 32px;
+    padding: 36px 24px 24px;
     order: 1;
   }
 
   .hero-name {
-    font-size: clamp(64px, 18vw, 96px);
+    font-size: clamp(54px, 15vw, 84px);
     margin-bottom: 20px;
   }
 
   .hero-tag {
     margin-bottom: 20px;
+    font-size: 10px;
   }
 
   .hero-role {
-    font-size: 11px;
+    font-size: 12px;
+    line-height: 1.6;
   }
 
   .hero-right {
-    padding: 24px 28px 32px;
+    padding: 20px 24px 32px;
     order: 2;
-    min-height: 180px;
+    min-height: auto;
   }
 
   .hero-year {
@@ -1700,45 +1724,48 @@ footer {
 
   .hero-stats-row {
     flex-direction: row;
-    gap: 0;
+    gap: 4px;
     margin: 16px 0;
   }
 
   .stat-h {
-    padding: 14px 8px;
+    padding: 14px 6px;
+    flex: 1;
+    min-height: 48px;
   }
 
   .stat-h .stat-num {
-    font-size: clamp(28px, 8vw, 42px);
+    font-size: clamp(26px, 7.5vw, 38px);
   }
 
   .stat-h .stat-label {
     font-size: 8px;
-    letter-spacing: 0.10em;
+    letter-spacing: 0.08em;
   }
 
   .ticker {
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
   .ti {
-    font-size: 16px;
-    padding: 0 18px;
-    gap: 18px;
+    font-size: 15px;
+    padding: 0 16px;
+    gap: 16px;
   }
 
   .about {
     grid-template-columns: 1fr;
-    padding: 60px 28px;
-    gap: 40px;
+    padding: 50px 24px;
+    gap: 32px;
   }
 
   .sec-title {
-    font-size: clamp(36px, 10vw, 52px);
+    font-size: clamp(34px, 9.5vw, 48px);
   }
 
   .about-text {
     font-size: 14px;
+    line-height: 1.65;
     max-width: 100%;
   }
 
@@ -1747,59 +1774,71 @@ footer {
   }
 
   .info-key {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .info-val {
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  .info-val a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 4px 8px;
   }
 
   .skills {
-    padding: 60px 28px;
+    padding: 50px 24px;
   }
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .sk {
-    padding: 24px 18px;
+    padding: 20px 16px;
   }
 
   .sk-icon {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 8px;
   }
 
   .sk-name {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .sk-list li {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .tools {
-    padding: 40px 28px;
+    padding: 36px 24px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 14px;
   }
 
   .pill {
     font-size: 10px;
-    padding: 5px 12px;
+    padding: 8px 14px;
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .projects {
-    padding: 60px 28px;
+    padding: 50px 24px;
   }
 
   .proj-card,
   .proj-card.rev {
     grid-template-columns: 1fr;
-    grid-template-rows: 260px auto;
+    grid-template-rows: auto auto;
     min-height: auto;
+    border-radius: 8px;
   }
 
   .proj-card.rev .proj-info {
@@ -1811,324 +1850,164 @@ footer {
   }
 
   .proj-info {
-    padding: 28px 24px;
+    padding: 24px 20px;
   }
 
   .proj-title {
-    font-size: clamp(32px, 9vw, 48px);
+    font-size: clamp(28px, 8.5vw, 40px);
   }
 
   .proj-desc {
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 1.6;
     max-width: 100%;
+  }
+
+  .proj-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 10px 18px;
+    background: rgba(154, 75, 255, 0.15);
+    border: 1px solid rgba(154, 75, 255, 0.5);
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 16px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
   }
 
   .browser-mock {
     max-width: 100%;
+    border-radius: 6px;
   }
 
   .browser-screen {
-    height: 220px;
+    height: 200px;
   }
 
   .proj-num {
-    font-size: 56px;
+    font-size: 48px;
+    bottom: 12px;
+    right: 16px;
   }
 
   .reels {
-    padding: 60px 28px;
+    padding: 50px 24px;
   }
 
   .reels-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .reel-wrap {
-    height: 240px;
+    height: 260px;
+    border-radius: 12px;
   }
-}
-
-/* --------------------------------------
-   CREATIVE GALLERY MODAL & GROUP BADGES
--------------------------------------- */
-.gallery-badge {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 4;
-  background: rgba(10, 10, 16, 0.85);
-  border: 1px solid rgba(154, 75, 255, 0.4);
-  backdrop-filter: blur(8px);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-family: "DM Mono", monospace;
-  font-size: 11px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-  transition: background 0.3s, border-color 0.3s, transform 0.3s;
-}
-
-.reel-wrap:hover .gallery-badge {
-  background: rgba(154, 75, 255, 0.9);
-  border-color: #b875ff;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-.badge-icon {
-  font-size: 12px;
-}
-
-.gallery-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-modal.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.gallery-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(5, 5, 8, 0.92);
-  backdrop-filter: blur(16px);
-}
-
-.gallery-container {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1000px;
-  max-height: 92vh;
-  background: #0d0d14;
-  border: 1px solid rgba(154, 75, 255, 0.3);
-  border-radius: 16px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(154, 75, 255, 0.15);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.gallery-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 24px;
-  background: rgba(255, 255, 255, 0.02);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.gallery-tag {
-  font-family: "DM Mono", monospace;
-  font-size: 11px;
-  color: var(--primary);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.gallery-head-title {
-  font-family: "Syne", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #fff;
-  margin-top: 2px;
-}
-
-.gallery-close {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-family: "DM Mono", monospace;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.gallery-close:hover {
-  background: #ff4757;
-  border-color: #ff4757;
-}
-
-.gallery-body {
-  position: relative;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  min-height: 440px;
-  overflow: hidden;
-  background: radial-gradient(circle at center, rgba(20, 18, 32, 0.8) 0%, #09090f 100%);
-}
-
-.gal-nav {
-  position: relative;
-  z-index: 5;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  flex-shrink: 0;
-}
-
-.gal-nav:hover {
-  background: var(--primary);
-  border-color: #b875ff;
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(154, 75, 255, 0.5);
-}
-
-.gal-stage {
-  position: relative;
-  flex: 1;
-  height: 100%;
-  max-height: 58vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
-}
-
-.gal-format-badge {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  background: rgba(10, 10, 16, 0.8);
-  border: 1px solid rgba(154, 75, 255, 0.4);
-  color: #b875ff;
-  font-family: "DM Mono", monospace;
-  font-size: 11px;
-  padding: 4px 12px;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-}
-
-.gal-main-img {
-  max-width: 100%;
-  max-height: 48vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.gal-img-caption {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.85);
-  margin-top: 14px;
-  text-align: center;
-}
-
-.gallery-thumbs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 16px 24px;
-  background: rgba(0, 0, 0, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  overflow-x: auto;
-}
-
-.gal-thumb {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 2px solid transparent;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: all 0.25s ease;
-  flex-shrink: 0;
-}
-
-.gal-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.gal-thumb.active {
-  opacity: 1;
-  border-color: var(--primary);
-  box-shadow: 0 0 14px rgba(154, 75, 255, 0.6);
-  transform: scale(1.08);
-}
-
-.gal-thumb:hover {
-  opacity: 1;
-}
 
   .reel-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .reel-label {
-    font-size: 9px;
+    font-size: 10px;
   }
 
-  .holo-container {
-    width: 92vw;
+  .gallery-badge {
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    font-size: 10.5px;
+  }
+
+  /* Modal Mobile Tuning */
+  .gallery-modal {
+    padding: 8px;
+  }
+
+  .gallery-container {
+    width: 96vw;
+    max-height: 94vh;
+    border-radius: 12px;
+  }
+
+  .gallery-header {
+    padding: 14px 16px;
+  }
+
+  .gallery-head-title {
+    font-size: 17px;
+  }
+
+  .gallery-close {
+    padding: 8px 14px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+  }
+
+  .gallery-body {
+    padding: 10px 4px;
+    min-height: 300px;
+  }
+
+  .gal-nav {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    background: rgba(154, 75, 255, 0.4);
+    border-color: rgba(154, 75, 255, 0.7);
+  }
+
+  .gal-main-img {
+    max-height: 50vh;
+  }
+
+  .gal-img-caption {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .gallery-thumbs {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .gal-thumb {
+    width: 50px;
+    height: 50px;
   }
 
   .experience {
-    padding: 60px 28px;
+    padding: 50px 24px;
   }
 
   .tl-container {
-    padding-left: 52px;
+    padding-left: 44px;
   }
 
   .tl-track {
-    left: 16px;
+    left: 14px;
   }
 
   .tl-node {
-    left: -43px;
-    width: 16px;
-    height: 16px;
+    left: -37px;
+    width: 14px;
+    height: 14px;
   }
 
   .tl-node-inner {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   }
 
   .tl-item {
-    grid-template-columns: 40px 1fr;
-    gap: 0 16px;
-    padding: 28px 0;
+    grid-template-columns: 36px 1fr;
+    gap: 0 14px;
+    padding: 24px 0;
   }
 
   .tl-year {
@@ -2136,11 +2015,12 @@ footer {
   }
 
   .tl-role {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .tl-desc {
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 1.55;
   }
 
   .tl-card-header {
@@ -2153,24 +2033,35 @@ footer {
   }
 
   .info-block {
-    padding: 48px 28px;
+    padding: 40px 24px;
   }
 
   .lang-name {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   footer {
     flex-direction: column;
     gap: 20px;
-    padding: 40px 28px;
+    padding: 36px 24px;
     text-align: center;
   }
 
   .footer-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 11px;
   }
 
   .sec-label {
@@ -2178,38 +2069,30 @@ footer {
   }
 
   .proj-hd, .skills-hd, .reels-hd, .exp-header {
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 }
 
 /* --------------------------------------
-   SMALL MOBILE STYLING (max-width: 420px)
+   SMALL MOBILE STYLING (max-width: 480px)
 -------------------------------------- */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .hero-name {
-    font-size: clamp(52px, 16vw, 72px);
+    font-size: clamp(48px, 14vw, 68px);
   }
 
   .hero-left {
-    padding: 36px 20px 24px;
+    padding: 28px 16px 20px;
   }
 
   .hero-right {
-    padding: 20px 20px 28px;
+    padding: 16px 16px 24px;
   }
 
   .about, .skills, .projects, .reels,
   .experience, .tools {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .info-block {
-    padding: 40px 20px;
-  }
-
-  footer {
-    padding: 32px 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .skills-grid {
@@ -2217,35 +2100,38 @@ footer {
   }
 
   .sk {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
 
-  .reels-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
+  .info-block {
+    padding: 36px 16px;
   }
 
-  .reel-wrap {
-    height: 170px;
+  footer {
+    padding: 28px 16px;
   }
 
   .tl-container {
-    padding-left: 44px;
+    padding-left: 36px;
   }
 
   .tl-item {
-    grid-template-columns: 32px 1fr;
+    grid-template-columns: 28px 1fr;
   }
 
   .tl-role {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .stat-h .stat-num {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .stat-h .stat-label {
     font-size: 7px;
+  }
+
+  .reel-wrap {
+    height: 250px;
   }
 }
